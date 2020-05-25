@@ -27,7 +27,7 @@ public final class IndexedQueryParameters implements QueryParameters {
     }
 
     /**
-     * @see de.audi.lion.common.core.persistence.QueryParameters#applyParameters(Query)
+     * @see QueryParameters#applyParameters(Query)
      */
     @Override
     public void applyParameters(Query query) {

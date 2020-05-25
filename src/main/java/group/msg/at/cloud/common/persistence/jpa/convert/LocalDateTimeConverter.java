@@ -9,9 +9,9 @@ import java.time.LocalDateTime;
  * {@code JPA Attribute Converter} to have support for {@code LocalDateTime}
  * attributes and PostgreSQL {@code TIMESTAMPTZ} columns.
  *
- * @author Michael Theis (michael.theis@hm.edu)
+ * @author Michael Theis (michael.theis@msg.group)
  * @version 1.0
- * @since release SS2019
+ * @since release 1.0.0
  */
 @Converter(autoApply = true)
 public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime, Timestamp> {

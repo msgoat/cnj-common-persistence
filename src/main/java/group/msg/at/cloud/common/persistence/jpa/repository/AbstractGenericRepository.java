@@ -21,9 +21,9 @@ import java.util.logging.Logger;
  * units in one JPA module.
  * </p>
  *
- * @author Michael Theis (michael.theis@hm.edu)
+ * @author Michael Theis (michael.theis@msg.group)
  * @version 1.0
- * @since release SS2019
+ * @since release 1.0.0
  */
 public abstract class AbstractGenericRepository {
 

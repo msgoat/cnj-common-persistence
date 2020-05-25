@@ -12,9 +12,9 @@ import java.util.List;
  * the CORE JavaEE Patterns website.
  * </p>
  *
- * @author Michael Theis (michael.theis@hm.edu)
+ * @author Michael Theis (michael.theis@msg.group)
  * @version 1.0
- * @since release SS2019
+ * @since release 1.0.0
  */
 public class Page<E> implements Serializable, Comparable<Page<E>> {
 

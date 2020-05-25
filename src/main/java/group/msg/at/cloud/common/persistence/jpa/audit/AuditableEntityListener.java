@@ -17,9 +17,9 @@ import java.time.LocalDateTime;
  * </p>
  * @see https://github.com/payara/Payara/issues/3720
  *
- * @author Michael Theis (michael.theis@hm.edu)
+ * @author Michael Theis (michael.theis@msg.group)
  * @version 1.0
- * @since release SS2019
+ * @since release 1.0.0
  */
 public class AuditableEntityListener {
 

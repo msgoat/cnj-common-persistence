@@ -16,9 +16,9 @@ import java.util.List;
  * pagination algorithms.
  * </p>
  *
- * @author Michael Theis (michael.theis@hm.edu)
+ * @author Michael Theis (michael.theis@msg.group)
  * @version 1.0
- * @since release SS2019
+ * @since release 1.0.0
  */
 public final class PageCriteria implements Serializable {
 
