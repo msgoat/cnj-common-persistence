@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2020-06-15
+### Added
+### Changed
+- removed dependency on EJB related classes from AuditableEntityListener to allow support of Quarkus
+
 ## [2.0.0] - 2020-05-25
 ### Added
 ### Changed

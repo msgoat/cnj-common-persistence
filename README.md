@@ -7,6 +7,6 @@ Provides common JPA persistence classes to build generic repositories and audita
 
 ## Release information
 
-Latest version is: `2.0.0`.
+Latest version is: `2.1.0`.
 
 A changelog can be found in [changelog.md](changelog.md).

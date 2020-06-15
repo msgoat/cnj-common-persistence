@@ -4,7 +4,7 @@ import javax.enterprise.inject.spi.CDI;
 import javax.inject.Inject;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
-import javax.security.enterprise.SecurityContext;
+import java.security.Principal;
 import java.time.LocalDateTime;
 
 /**
@@ -15,16 +15,16 @@ import java.time.LocalDateTime;
  * not support CDI in JPA resources as long as AttributeConverters are present. So we have to
  * use a programmatic lookup of the {@code SecurityContext} if the local field should be {@code null}.
  * </p>
- * @see https://github.com/payara/Payara/issues/3720
  *
  * @author Michael Theis (michael.theis@msg.group)
- * @version 1.0
+ * @version 1.1
+ * @see https://github.com/payara/Payara/issues/3720
  * @since release 1.0.0
  */
 public class AuditableEntityListener {
 
     @Inject
-    private SecurityContext securityContext;
+    private Principal securityContext;
 
     @PrePersist
     public void onPrePersist(AbstractAuditableEntity entity) {
@@ -38,8 +38,8 @@ public class AuditableEntityListener {
 
     private String getAuthenticatedUserId() {
         String result = "anonymous";
-        if (getSecurityContext().getCallerPrincipal() != null) {
-            result = getSecurityContext().getCallerPrincipal().getName();
+        if (getSecurityContext() != null) {
+            result = getSecurityContext().getName();
         }
         return result;
     }
@@ -48,9 +48,9 @@ public class AuditableEntityListener {
      * Wraps access to {@link #securityContext} in order to perform a programmatic CDI lookup in case
      * CDI injection didn't happen.
      */
-    private SecurityContext getSecurityContext() {
+    private Principal getSecurityContext() {
         if (this.securityContext == null) {
-            this.securityContext = CDI.current().select(SecurityContext.class).get();
+            this.securityContext = CDI.current().select(Principal.class).get();
         }
         return this.securityContext;
     }
