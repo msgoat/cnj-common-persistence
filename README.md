@@ -1,6 +1,6 @@
 # cnj-common-persistence-jpa
 
-Provides common JPA persistence classes to build generic repositories and auditable entities using the `javax.*`.
+Provides common JPA persistence classes to build generic repositories and auditable entities using the `javax.*` namespace.
 
 Consumers moved to Jakarta EE 10 should use the Jakarta EE 10 version at [cnj-common-persistence-jakarta](https://github.com/msgoat/cnj-common-persistence-jakarta).
 
