@@ -55,8 +55,7 @@ public final class QueryParameter implements Serializable {
     @Override
     public boolean equals(Object o) {
         boolean result = this == o;
-        if (!result && o instanceof QueryParameter) {
-            final QueryParameter rhs = (QueryParameter) o;
+        if (!result && o instanceof final QueryParameter rhs) {
             result = this.name.equals(rhs.name);
         }
         return result;
@@ -80,6 +79,6 @@ public final class QueryParameter implements Serializable {
      */
     @Override
     public String toString() {
-        return new StringBuilder().append("QueryParameter{").append("name=").append(this.name).append("}").toString();
+        return "QueryParameter{" + "name=" + this.name + "}";
     }
 }
